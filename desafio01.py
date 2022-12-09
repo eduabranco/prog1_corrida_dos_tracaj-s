@@ -19,4 +19,5 @@ for i in range (len(lista)):
     elif lista[i]>=10 and lista[i]<15 and nvl<2:nvl=2
     elif lista[i]>=15 and nvl<3:nvl=3
 if erros==[]: print(nvl)
-else: print(f'Valor inválido na(s) linha(s): {erros}')
+else:
+    for i in erros: print(f'Valor inválido na linha {i}')

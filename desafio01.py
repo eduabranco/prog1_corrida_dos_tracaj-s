@@ -1,4 +1,5 @@
 lista=[]
+erros=[]
 while True:
     try:
         qntos=int(input("Quantos Tracajás?(1-50 tracajás)\n"))
@@ -13,9 +14,9 @@ while True:
 nvl=0
 for i in range (len(lista)):
     if lista[i]>25 or lista[i]<1: 
-        print(f'Valor inválido na linha {1+i}')
-        exit()
+        erros.append(i+1)
     elif lista[i]<10 and nvl<1:nvl=1
     elif lista[i]>=10 and lista[i]<15 and nvl<2:nvl=2
     elif lista[i]>=15 and nvl<3:nvl=3
-print(nvl)
+if erros==[]: print(nvl)
+else: print(f'Valor inválido na(s) linha(s): {erros}')
